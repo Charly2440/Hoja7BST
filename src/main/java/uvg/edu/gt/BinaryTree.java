@@ -1,7 +1,5 @@
 package uvg.edu.gt;
 
-import java.util.HashMap;
-
 public class BinaryTree<K extends Comparable<K>, V> {
     private TreeNode<K, V> root;
 
@@ -15,12 +13,11 @@ public class BinaryTree<K extends Comparable<K>, V> {
 
     private TreeNode<K, V> putRecursive(TreeNode<K, V> node, K key, V value) {
         if (node == null) {
-            HashMap<K, V> data = new HashMap<>();
-            data.put(key, value);
+            Association<K, V> data = new Association<>(key, value);
             return new TreeNode<>(data);
         }
 
-        K nodeKey = node.getData().keySet().iterator().next(); // Get the key from the node's data
+        K nodeKey = node.getData().getKey(); // Get the key from the node's data
         int cmp = key.compareTo(nodeKey);
         if (cmp < 0) {
             node.setLeft(putRecursive(node.getLeft(), key, value));
@@ -28,7 +25,7 @@ public class BinaryTree<K extends Comparable<K>, V> {
             node.setRight(putRecursive(node.getRight(), key, value));
         } else {
             // Key already exists, update the value
-            node.getData().put(key, value);
+            node.getData().setValue(value);
         }
 
         return node;
@@ -37,15 +34,16 @@ public class BinaryTree<K extends Comparable<K>, V> {
 
     public V get(K key) {
         TreeNode<K, V> node = getRecursive(this.root, key);
-        return (node != null && node.getData().containsKey(key)) ? node.getData().get(key) : null;
+        return (node != null) ? node.getData().getValue() : null;
     }
 
     private TreeNode<K, V> getRecursive(TreeNode<K, V> node, K key) {
-        if (node == null || !node.getData().containsKey(key)) {
+        if (node == null) {
             return null;
         }
 
-        int cmp = key.compareTo(node.getData().keySet().iterator().next());
+        K nodeKey = node.getData().getKey();
+        int cmp = key.compareTo(nodeKey);
         if (cmp < 0) {
             return getRecursive(node.getLeft(), key);
         } else if (cmp > 0) {
@@ -54,5 +52,4 @@ public class BinaryTree<K extends Comparable<K>, V> {
             return node;
         }
     }
-
 }

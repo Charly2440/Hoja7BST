@@ -3,21 +3,21 @@ package uvg.edu.gt;
 import java.util.HashMap;
 
 public class TreeNode<K, V> {
-    private HashMap<K, V> data;
+    private Association<K, V> data;
     private TreeNode<K, V> right;
     private TreeNode<K, V> left;
 
-    public TreeNode(HashMap<K, V> data){
+    public TreeNode(Association<K, V> data){
         this.data = data;
         this.right = null;
         this.left = null;
     }
 
-    public HashMap<K, V> getData() {
+    public Association<K, V> getData() {
         return data;
     }
 
-    public void setData(HashMap<K, V> data) {
+    public void setData(Association<K, V> data) {
         this.data = data;
     }
 
