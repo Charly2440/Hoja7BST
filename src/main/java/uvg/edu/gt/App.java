@@ -1,8 +1,6 @@
 package uvg.edu.gt;
 
-import com.sun.tools.jdeprscan.scan.Scan;
-
-import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -15,6 +13,8 @@ public class App
     {
         Scanner scanner = new Scanner(System.in);
         BinaryTree<String, String> arbol = new BinaryTree<>();
+        //Direccion del archivo de texto con la oracion a traducir
+        String direccion = "C:\\Users\\cjvil\\Downloads\\textoPruebaDiccionario.txt";
         int choice;
         do {
             System.out.println("Menu:");
@@ -26,10 +26,10 @@ public class App
 
             switch (choice) {
                 case 1:
-                    usarDiccionarioLocal();
+                    System.out.println(usarDiccionarioLocal(scanner,arbol));
                     break;
                 case 2:
-                    //usarDiccionarioConArchivo();
+                    System.out.println(usarDiccionarioConArchivo(scanner, arbol, direccion));
                     break;
                 case 3:
                     System.out.println("Saliendo del programa...");
@@ -43,15 +43,15 @@ public class App
     }
 
     private static String usarDiccionarioLocal(Scanner scanner, BinaryTree<String,String> arbol) {
+        rellenarDicionario(arbol);
         System.out.println("Usando diccionario local...");
         System.out.println("Ingrese la oración a traducir: ");
         scanner.nextLine();
-        String input = scanner.next();
-        scanner.nextLine();
+        String input = scanner.nextLine();
         String[] inputSep = input.split(" ");
         String resultado = "";
         for (int i = 0; i < inputSep.length; i++) {
-            if (arbol.get(inputSep[i]) != null) {
+            if (arbol.get(inputSep[i].toLowerCase()) != null) {
                 resultado = resultado + " " + arbol.get(inputSep[i]);
             } else {
                 resultado = resultado + " " + "\"" + inputSep[i] + "\"";
@@ -60,13 +60,37 @@ public class App
         return resultado;
     }
 
-    private static void usarDiccionarioConArchivo() {
-        // Implementar la lógica para usar el diccionario con archivo de texto
+    private static String usarDiccionarioConArchivo(Scanner scanner, BinaryTree<String, String> arbol, String direccion) {
         System.out.println("Usando diccionario con archivo de texto...");
+
+        rellenarDicionario(arbol);
+        LeerArchivo lector = new LeerArchivo();
+
+        List<String> input = lector.leerArchivo(direccion);
+        String[] inputSep = input.get(0).split(" ");
+        String resultado = "";
+        for (int i = 0; i < inputSep.length; i++) {
+            if (arbol.get(inputSep[i].toLowerCase()) != null) {
+                resultado = resultado + " " + arbol.get(inputSep[i]);
+            } else {
+                resultado = resultado + " " + "\"" + inputSep[i] + "\"";
+            }
+        }
+        return resultado;
     }
 
     private static void rellenarDicionario(BinaryTree<String, String> arbol){
-
+        arbol.put("house", "casa");
+        arbol.put("dog", "perro");
+        arbol.put("homework", "tarea");
+        arbol.put("woman", "mujer");
+        arbol.put("town", "pueblo");
+        arbol.put("yes", "sí");
+        arbol.put("cat", "gato");
+        arbol.put("car", "coche");
+        arbol.put("apple", "manzana");
+        arbol.put("tree", "árbol");
+        arbol.put("book", "libro");
     }
 
 }

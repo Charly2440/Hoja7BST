@@ -8,7 +8,7 @@ import java.util.List;
 
 public class LeerArchivo {
 
-    private List<String> leerArchivo(String nombreFichero){
+    public List<String> leerArchivo(String nombreFichero){
         List<String> lista = new ArrayList<String>();
         // Declarar una variable BufferedReader
         BufferedReader br = null;
