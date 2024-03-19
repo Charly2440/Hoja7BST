@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1ebfed56-14af-4afa-a1a0-9e8a7fc78baa" name="Changes" comment="Implementacion de BST con asociacion">
+      <change afterPath="$PROJECT_DIR$/src/main/java/uvg/edu/gt/LeerArchivo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uvg/edu/gt/Association.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uvg/edu/gt/Association.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uvg/edu/gt/BinaryTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uvg/edu/gt/BinaryTree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uvg/edu/gt/TreeNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uvg/edu/gt/TreeNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uvg/edu/gt/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uvg/edu/gt/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/uvg/edu/gt/MetodosBST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/uvg/edu/gt/MetodosBST.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,6 +36,8 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "JUnit.MetodosBST.probar.executor": "Run",
+    "JUnit.MetodosBST.testImplementacionAssociation.executor": "Run",
     "JUnit.MetodosBST.testImplementacionBST.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -51,7 +52,39 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.MetodosBST.testImplementacionBST">
+    <configuration name="MetodosBST.probar" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="HdT7" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="uvg.edu.gt.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="uvg.edu.gt" />
+      <option name="MAIN_CLASS_NAME" value="uvg.edu.gt.MetodosBST" />
+      <option name="METHOD_NAME" value="probar" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MetodosBST.testImplementacionAssociation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="HdT7" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="uvg.edu.gt.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="uvg.edu.gt" />
+      <option name="MAIN_CLASS_NAME" value="uvg.edu.gt.MetodosBST" />
+      <option name="METHOD_NAME" value="testImplementacionAssociation" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MetodosBST.testImplementacionBST" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HdT7" />
       <extension name="coverage">
@@ -71,6 +104,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.MetodosBST.testImplementacionBST" />
+        <item itemvalue="JUnit.MetodosBST.testImplementacionAssociation" />
+        <item itemvalue="JUnit.MetodosBST.probar" />
       </list>
     </recent_temporary>
   </component>
@@ -91,7 +126,7 @@
       <option name="presentableId" value="Default" />
       <updated>1710783453695</updated>
       <workItem from="1710783454829" duration="4000" />
-      <workItem from="1710804601233" duration="8623000" />
+      <workItem from="1710804601233" duration="11727000" />
     </task>
     <task id="LOCAL-00001" summary="Implementacion de BST">
       <option name="closed" value="true" />
@@ -125,7 +160,23 @@
       <option name="project" value="LOCAL" />
       <updated>1710812548106</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Implementacion de BST con asociacion">
+      <option name="closed" value="true" />
+      <created>1710821220562</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1710821220562</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Implementacion de BST con asociacion">
+      <option name="closed" value="true" />
+      <created>1710821226661</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1710821226661</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

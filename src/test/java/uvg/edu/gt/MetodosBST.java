@@ -17,5 +17,13 @@ public class MetodosBST {
         System.out.println("Translation of 'town': " + dictionary.get("town"));
         System.out.println("Translation of 'yes': " + dictionary.get("yes"));
         System.out.println();
+        System.out.println(dictionary.get("dog"));
+        System.out.println(dictionary.get("pencil"));
+    }
+    @Test
+    public void testImplementacionAssociation(){
+        Association<String, String> asso1 = new Association<>("Hola", "hello");
+        System.out.println(asso1.getKey()+" "+asso1.getValue());
+
     }
 }
