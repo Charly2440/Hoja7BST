@@ -17,10 +17,11 @@ public class App
         String direccion = "C:\\Users\\cjvil\\Downloads\\textoPruebaDiccionario.txt";
         int choice;
         do {
-            System.out.println("Menu:");
+            System.out.println("\nMenu:");
             System.out.println("1. Usar diccionario local");
             System.out.println("2. Usar diccionario con archivo de texto");
-            System.out.println("3. Salir");
+            System.out.println("3. Mostrar los elementos del arbol binario \"in-order\" ");
+            System.out.println("4. Salir");
             System.out.print("Ingrese su elección: ");
             choice = scanner.nextInt();
 
@@ -32,12 +33,17 @@ public class App
                     System.out.println(usarDiccionarioConArchivo(scanner, arbol, direccion));
                     break;
                 case 3:
+                    rellenarDicionario(arbol);
+                    System.out.println("Elementos en in-order:");
+                    System.out.println(arbol.traverseInOrder());
+                    break;
+                case 4:
                     System.out.println("Saliendo del programa...");
                     break;
                 default:
                     System.out.println("Opción inválida. Por favor, ingrese una opción válida.");
             }
-        } while (choice != 3);
+        } while (choice != 4);
 
         scanner.close();
     }

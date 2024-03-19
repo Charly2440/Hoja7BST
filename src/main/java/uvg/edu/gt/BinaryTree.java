@@ -1,5 +1,8 @@
 package uvg.edu.gt;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class BinaryTree<K extends Comparable<K>, V> {
     private TreeNode<K, V> root;
 
@@ -51,5 +54,21 @@ public class BinaryTree<K extends Comparable<K>, V> {
         } else {
             return node;
         }
+    }
+
+    public List<V> traverseInOrder() {
+        List<V> result = new ArrayList<>();
+        traverseInOrderRecursive(root, result);
+        return result;
+    }
+
+    private void traverseInOrderRecursive(TreeNode<K, V> node, List<V> result) {
+        if (node == null) {
+            return;
+        }
+
+        traverseInOrderRecursive(node.getLeft(), result);
+        result.add(node.getData().getValue());
+        traverseInOrderRecursive(node.getRight(), result);
     }
 }

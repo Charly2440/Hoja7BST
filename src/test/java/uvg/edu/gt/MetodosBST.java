@@ -17,8 +17,7 @@ public class MetodosBST {
         System.out.println("Translation of 'town': " + dictionary.get("town"));
         System.out.println("Translation of 'yes': " + dictionary.get("yes"));
         System.out.println();
-        System.out.println(dictionary.get("dog"));
-        System.out.println(dictionary.get("pencil"));
+        System.out.println(dictionary.traverseInOrder());
     }
     @Test
     public void testImplementacionAssociation(){
