@@ -4,16 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ebfed56-14af-4afa-a1a0-9e8a7fc78baa" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uvg/edu/gt/Association.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uvg/edu/gt/BinaryTree.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uvg/edu/gt/TreeNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/uvg/edu/gt/MetodosBST.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="1ebfed56-14af-4afa-a1a0-9e8a7fc78baa" name="Changes" comment="Implementacion de BST">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uvg/edu/gt/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uvg/edu/gt/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uvg/edu/gt/Association.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uvg/edu/gt/Association.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uvg/edu/gt/BinaryTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uvg/edu/gt/BinaryTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uvg/edu/gt/TreeNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uvg/edu/gt/TreeNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/uvg/edu/gt/MetodosBST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/uvg/edu/gt/MetodosBST.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,11 +91,32 @@
       <option name="presentableId" value="Default" />
       <updated>1710783453695</updated>
       <workItem from="1710783454829" duration="4000" />
-      <workItem from="1710804601233" duration="5263000" />
+      <workItem from="1710804601233" duration="7100000" />
     </task>
+    <task id="LOCAL-00001" summary="Implementacion de BST">
+      <option name="closed" value="true" />
+      <created>1710810702128</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1710810702128</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Implementacion de BST">
+      <option name="closed" value="true" />
+      <created>1710810707722</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1710810707722</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Implementacion de BST" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implementacion de BST" />
   </component>
 </project>

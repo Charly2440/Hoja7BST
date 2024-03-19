@@ -1,52 +1,58 @@
 package uvg.edu.gt;
 
-import java.util.ArrayList;
+import java.util.HashMap;
 
-public class BinaryTree<T extends Comparable<T>> {
-    private TreeNode<T> root;
+public class BinaryTree<K extends Comparable<K>, V> {
+    private TreeNode<K, V> root;
 
     public BinaryTree() {
         this.root = null;
     }
 
-    public boolean isEmpty() {
-        return root == null;
+    public void put(K key, V value) {
+        this.root = putRecursive(this.root, key, value);
     }
 
-    public void clear() {
-        this.root = null;
-    }
-
-    public void insert(T val) {
-        this.root = insertRecursive(this.root, val);
-    }
-
-    private TreeNode<T> insertRecursive(TreeNode<T> node, T val) {
+    private TreeNode<K, V> putRecursive(TreeNode<K, V> node, K key, V value) {
         if (node == null) {
-            return new TreeNode<>(val);
+            HashMap<K, V> data = new HashMap<>();
+            data.put(key, value);
+            return new TreeNode<>(data);
         }
 
-        if (val.compareTo(node.getData()) < 0) {
-            node.setLeft(insertRecursive(node.getLeft(), val));
-        } else if (val.compareTo(node.getData()) > 0) {
-            node.setRight(insertRecursive(node.getRight(), val));
+        K nodeKey = node.getData().keySet().iterator().next(); // Get the key from the node's data
+        int cmp = key.compareTo(nodeKey);
+        if (cmp < 0) {
+            node.setLeft(putRecursive(node.getLeft(), key, value));
+        } else if (cmp > 0) {
+            node.setRight(putRecursive(node.getRight(), key, value));
+        } else {
+            // Key already exists, update the value
+            node.getData().put(key, value);
         }
 
         return node;
     }
 
-    public ArrayList<T> inorderTraversal() {
-        ArrayList<T> result = new ArrayList<>();
-        inorderTraversalRecursive(this.root, result);
-        return result;
+
+    public V get(K key) {
+        TreeNode<K, V> node = getRecursive(this.root, key);
+        return (node != null && node.getData().containsKey(key)) ? node.getData().get(key) : null;
     }
 
-    private void inorderTraversalRecursive(TreeNode<T> node, ArrayList<T> result) {
-        if (node != null) {
-            inorderTraversalRecursive(node.getLeft(), result);
-            result.add(node.getData());
-            inorderTraversalRecursive(node.getRight(), result);
+    private TreeNode<K, V> getRecursive(TreeNode<K, V> node, K key) {
+        if (node == null || !node.getData().containsKey(key)) {
+            return null;
+        }
+
+        int cmp = key.compareTo(node.getData().keySet().iterator().next());
+        if (cmp < 0) {
+            return getRecursive(node.getLeft(), key);
+        } else if (cmp > 0) {
+            return getRecursive(node.getRight(), key);
+        } else {
+            return node;
         }
     }
-}
 
+}

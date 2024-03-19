@@ -1,35 +1,39 @@
 package uvg.edu.gt;
 
-public class TreeNode<T> {
-    private T data;
-    private TreeNode<T> right;
-    private TreeNode<T> left;
+import java.util.HashMap;
 
-    public TreeNode(T data){
+public class TreeNode<K, V> {
+    private HashMap<K, V> data;
+    private TreeNode<K, V> right;
+    private TreeNode<K, V> left;
+
+    public TreeNode(HashMap<K, V> data){
         this.data = data;
         this.right = null;
         this.left = null;
     }
 
-    public T getData() {
+    public HashMap<K, V> getData() {
         return data;
     }
-    public void setData(T data) {
+
+    public void setData(HashMap<K, V> data) {
         this.data = data;
     }
 
-    public TreeNode<T> getLeft() {
+    public TreeNode<K, V> getLeft() {
         return left;
     }
-    public void setLeft(TreeNode<T> left) {
+
+    public void setLeft(TreeNode<K, V> left) {
         this.left = left;
     }
 
-    public TreeNode<T> getRight() {
+    public TreeNode<K, V> getRight() {
         return right;
     }
-    public void setRight(TreeNode<T> right) {
+
+    public void setRight(TreeNode<K, V> right) {
         this.right = right;
     }
 }
-
