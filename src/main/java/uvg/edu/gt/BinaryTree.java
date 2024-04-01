@@ -56,10 +56,10 @@ public class BinaryTree<K extends Comparable<K>, V> {
         }
     }
 
-    public List<V> traverseInOrder() {
+    public String traverseInOrder() {
         List<V> result = new ArrayList<>();
         traverseInOrderRecursive(root, result);
-        return result;
+        return result.toString();
     }
 
     private void traverseInOrderRecursive(TreeNode<K, V> node, List<V> result) {
